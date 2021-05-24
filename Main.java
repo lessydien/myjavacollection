@@ -1,5 +1,5 @@
 import java.util.*;
-
+import java.util.Scanner;
 /**
  * class Main.
  *
@@ -15,11 +15,18 @@ public class Main
         
         // ArrayList dengan custom Object
         ArrayList<Mahasiswa> arraylistMhs= new ArrayList<Mahasiswa>();
-
         
+        
+        // create an object of Scanner
+        Scanner input = new Scanner(System.in);
+
+        // take input from the user
+        String nama = input.next();
+        // nextInt()
         als.add("Doni");
         als.add("Budi");
         als.add("Ayu");
+        als.add(nama);
         
         System.out.println(als);
         
