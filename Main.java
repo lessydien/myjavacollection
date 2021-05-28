@@ -15,14 +15,66 @@ public class Main
         
         // ArrayList dengan custom Object
         ArrayList<Mahasiswa> arraylistMhs= new ArrayList<Mahasiswa>();
-        
-        
+        int jumlah=0, nim=0;
+        String nama=null;
         // create an object of Scanner
         Scanner input = new Scanner(System.in);
-
+        // Jumlah mahasiswa yang mau di tambahkan
+        System.out.print("Jumlah Mahasiswa: ");
+        jumlah = input.nextInt();
+        
+        for(int a=0;a<jumlah;a++)
+        {
+            // todo list????
+            int in = a+1;
+            System.out.print("Nim mahasiswa ke-" + in +": ");
+            nim = input.nextInt();
+            System.out.print("Nama mahasiswa ke-" + in +": ");
+            nama = input.next();
+            arraylistMhs.add(new Mahasiswa(nim,nama));
+        }
+        
+        System.out.println("Daftar Mahasiswa: ");
+        for(Mahasiswa mhs:arraylistMhs)
+        {
+            System.out.println(mhs.getnimMhs() +" "+ mhs.getnamaMhs());  
+        }
+        
+        System.out.print("Masukkan NIM yang akan dihapus: ");
+        nim = input.nextInt();
+        
+        // for(int a=0; a < arraylistMhs.size(); a++)
+        // {
+            
+            // int nim1 = mhs.nimMhs();
+            // // if (nim1 == nim) 
+            // // {
+                
+            // // }
+            // System.out.println(arraylistMhs.get(a).getnimMhs() +" "+ arraylistMhs.get(a).getnamaMhs());  
+        // }
+        
+        for(Mahasiswa mhs:arraylistMhs)
+        {
+            int nim1 = mhs.getnimMhs();
+            if (nim1 == nim)
+            {
+                arraylistMhs.indexOf(mhs);
+                arraylistMhs.remove(arraylistMhs.indexOf(mhs));
+                break;
+            }
+        }
+        
+        System.out.println("Daftar mahasiswa setelah dihapus");
+        for(Mahasiswa mhs:arraylistMhs)
+        {
+            System.out.println(mhs.getnimMhs()+" - "+mhs.getnamaMhs());
+        }
         // take input from the user
-        String nama = input.next();
+        //String nama = input.next();
         // nextInt()
+        
+        /*
         als.add("Doni");
         als.add("Budi");
         als.add("Ayu");
@@ -82,6 +134,7 @@ public class Main
             System.out.println(mhs.getnimMhs() +" "+ mhs.getnamaMhs());
                
         }
+        */
         
     }
 }
