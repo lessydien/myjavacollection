@@ -10,6 +10,94 @@ public class Main
 {
     public static void main(String args[])
     {
+        
+        ArrayList<Integer> arri = new ArrayList<Integer>();
+        ArrayList<String> arrs = new ArrayList<String>();
+        ArrayList<Mahasiswa> arrm = new ArrayList<Mahasiswa>();
+        
+        arri.add(4);
+        arri.add(5);
+        arri.add(1);
+        arri.add(2);
+        
+        arrs.add("Doni");
+        arrs.add("Ayu");
+        arrs.add("Bayu");
+        arrs.add("Fikri");
+        
+        // arrm.add(new Mahasiswa(1001,"Doni"));
+        // arrm.add(new Mahasiswa(1002,"Bayu"));
+        // arrm.add(new Mahasiswa(1003,"Fikri"));
+        
+        System.out.println("Data Mahasiswa");
+        System.out.print("Jumlah Mahasiswa: ");
+        Scanner input = new Scanner(System.in);
+        int jumlah=0, nim=0;
+        String nama=null;
+        jumlah = input.nextInt();
+        
+        for (int i=0; i < jumlah ; i++) 
+        {
+            System.out.print("Nim ke-"+(i+1)+": ");
+            nim = input.nextInt();
+            System.out.print("Nama ke-"+(i+1)+":  ");
+            nama = input.next();
+            arrm.add(new Mahasiswa(nim,nama));
+        }
+        
+        
+        System.out.println("Menampilkan Data Mahasiswa");
+        for (Mahasiswa mhs: arrm)
+        {
+            System.out.println(mhs.getnimMhs()+" - "+ mhs.getnamaMhs());
+        }
+        
+        
+        System.out.println("Menampilkan Data Mahasiswa");
+        for (Mahasiswa mhs: arrm)
+        {
+            if(mhs.getnimMhs() == 1001)
+            {
+               arrm.indexOf(mhs);
+               arrm.remove(arrm.indexOf(mhs));
+               break;
+            }
+            System.out.println(mhs.getnimMhs()+" - "+ mhs.getnamaMhs());
+        }
+        
+        
+        
+        System.out.println("----------");
+        System.out.println("----------");
+        System.out.println("Menampilkan Nilai Array List dengan for biasa");
+        for(int i=0; i < arri.size(); i++)
+        {
+            System.out.println(arri.get(i));
+            //System.out.println(arrs.get(i));
+        }
+        
+        Collections.sort(arri);
+        System.out.println("Menampilkan Nilai Array List iterator");
+        for (Integer valx: arri)
+        {
+            System.out.println(valx);
+        }
+        
+        System.out.println("Menampilkan Nilai Array sebelum sort");
+        for (String valx: arrs)
+        {
+            System.out.println(valx);
+        }
+        
+        
+        Collections.sort(arrs);
+        System.out.println("Menampilkan Nilai Array setelah sort");
+        for (String valx: arrs)
+        {
+            System.out.println(valx);
+        }
+        
+        /*
         ArrayList<String> als = new ArrayList<String>();
         ArrayList<String> alsi= new ArrayList<String>();
         
