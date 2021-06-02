@@ -31,7 +31,12 @@ public class Mahasiswa
         this.nama = nama;
     }
     
-
+    public void setnimMhs(int nim)
+    {
+         this.nim = nim;
+    }
+    
+    
 
     
 }

@@ -19,6 +19,7 @@ public class Main
         arri.add(5);
         arri.add(1);
         arri.add(2);
+   
         
         arrs.add("Doni");
         arrs.add("Ayu");
@@ -28,7 +29,7 @@ public class Main
         // arrm.add(new Mahasiswa(1001,"Doni"));
         // arrm.add(new Mahasiswa(1002,"Bayu"));
         // arrm.add(new Mahasiswa(1003,"Fikri"));
-        
+        /*
         System.out.println("Data Mahasiswa");
         System.out.print("Jumlah Mahasiswa: ");
         Scanner input = new Scanner(System.in);
@@ -52,6 +53,20 @@ public class Main
             System.out.println(mhs.getnimMhs()+" - "+ mhs.getnamaMhs());
         }
         
+        for (Mahasiswa mhs: arrm)
+        {
+            System.out.println(mhs);
+        }
+        
+        
+        Collections.sort(arrm,new MahasiswaComparatorString());
+        System.out.println("Menampilkan Data Mahasiswa setelah pengurutan");
+        for (Mahasiswa mhs: arrm)
+        {
+            System.out.println(mhs.getnimMhs()+" - "+ mhs.getnamaMhs());
+        }
+        
+        
         
         System.out.println("Menampilkan Data Mahasiswa");
         for (Mahasiswa mhs: arrm)
@@ -66,7 +81,7 @@ public class Main
         }
         
         
-        
+        */
         System.out.println("----------");
         System.out.println("----------");
         System.out.println("Menampilkan Nilai Array List dengan for biasa");
@@ -76,8 +91,16 @@ public class Main
             //System.out.println(arrs.get(i));
         }
         
+        arri.remove(2);
+        
+        System.out.println("Menampilkan Nilai Array List sebelum sort");
+        for (Integer valx: arri)
+        {
+            System.out.println(valx);
+        }
+       
         Collections.sort(arri);
-        System.out.println("Menampilkan Nilai Array List iterator");
+        System.out.println("Menampilkan Nilai Array List setelah sort");
         for (Integer valx: arri)
         {
             System.out.println(valx);
@@ -89,7 +112,7 @@ public class Main
             System.out.println(valx);
         }
         
-        
+          arrs.remove("Doni");
         Collections.sort(arrs);
         System.out.println("Menampilkan Nilai Array setelah sort");
         for (String valx: arrs)
